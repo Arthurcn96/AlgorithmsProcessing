@@ -7,7 +7,9 @@ void draw() {
   arvore();
   predio();
   
-  noLoop();
+  frameRate(0.5);
+  
+  //noLoop();
   save("predio.png");
   
 }
