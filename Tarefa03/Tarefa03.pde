@@ -1,7 +1,7 @@
 //
-//	Implementar e aplicar um filtro negativo
-//	em uma imagem salvar o resultado em um png.
-//	Autor: Arthur Novais
+//  Implementar e aplicar um filtro negativo
+//  em uma imagem salvar o resultado em um png.
+//  Autor: Arthur Novais
 //
 
 import java.awt.*;
