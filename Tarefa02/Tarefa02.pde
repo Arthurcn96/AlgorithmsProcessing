@@ -1,3 +1,8 @@
+//
+//	Programa para gerar gerar e salvar a imagem de um prédio 
+//	Autor: Arthur Novais
+//
+
 void setup() {
   size(600, 600);
 }
