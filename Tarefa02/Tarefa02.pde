@@ -13,13 +13,10 @@ void draw() {
   predio();
   
   frameRate(0.5);
-  
-  //noLoop();
   save("predio.png");
-  
 }
 
-//Salva a imagem ai fechar janela
+//Salva a imagem ao fechar janela
 void dispose(){
     javax.swing.JOptionPane.showMessageDialog ( null, "A Imagem Foi Salva Na Pasta Do Projeto", "Imagem Salva", javax.swing.JOptionPane.INFORMATION_MESSAGE  );
     //save("predio.png");
@@ -49,6 +46,7 @@ void predio() {
   rect(0, 0, 320, 580);
 
   int j, i = 0;
+  
   //Desenha as janelas
   while(i<5){
     janela(true, 30+(90*i), 30);
