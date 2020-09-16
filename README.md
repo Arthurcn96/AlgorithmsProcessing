@@ -25,3 +25,13 @@ automaticamente o resultado no formato (.png)
 |:---------------:|:---------------------:|:-----------------------:|
 |<img align="right"  width="100%" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/master/Tarefa04/exemplo.jpg" /> |<img align="right"  width="100%" max-height="240" alt="GIF" src="https://github.com/Arthurcn96/AlgorithmsProcessing/blob/master/Tarefa04/Verticalexemplo.jpg" />|<img align="right"  width="100%" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/master/Tarefa04/Horizontalexemplo.jpg" />
 
+
+## [Tarefa Rotação Direta](https://github.com/Arthurcn96/AlgorithmsProcessing/tree/master/Tarefa05):
+1) A tarefa a ser realizada é programar o processo de rotação empregando a fórmula:
+
+Para cada Ponto P(x,y) obter o ponto resultante P’(x,y). A Forma Matricial é :
+
+<img align="right"  width="100%" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/master/asset/formula.jpg" />
+
+Com ângulos Θ = 33 ou 57 graus
+O resultado será gravado automaticamente no formato (.png).
