@@ -31,7 +31,7 @@ automaticamente o resultado no formato (.png)
 
 Para cada Ponto P(x,y) obter o ponto resultante P’(x,y). A Forma Matricial é :
 
-<img align="right"  width="100%" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/master/asset/formula.jpg" />
+<img align="right"  width="100%" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/master/asset/formula.jpeg" />
 
 Com ângulos Θ = 33 ou 57 graus
 O resultado será gravado automaticamente no formato (.png).
