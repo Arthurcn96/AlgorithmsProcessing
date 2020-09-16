@@ -1,29 +1,45 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Tarefa02 extends PApplet {
+
 //
 //	Programa para gerar gerar e salvar a imagem de um prédio
 //	Autor: Arthur Novais
 //
 
-void setup() {
-  size(600, 600);
+public void setup() {
+  
 }
 
-void draw() {
+public void draw() {
 
   arvore();
   predio();
 
-  frameRate(0.5);
+  frameRate(0.5f);
   save("predio.png");
 }
 
 //Salva a imagem ao fechar janela
-void dispose(){
+public void dispose(){
     javax.swing.JOptionPane.showMessageDialog ( null, "A Imagem Foi Salva Na Pasta Do Projeto", "Imagem Salva", javax.swing.JOptionPane.INFORMATION_MESSAGE  );
     //save("predio.png");
 }
 
 //Função que desenha a Árvore
-void arvore() {
+public void arvore() {
 
   pushMatrix();
   strokeWeight(2);
@@ -39,7 +55,7 @@ void arvore() {
 
 
 //Função que desenha o prédio
-void predio() {
+public void predio() {
   pushMatrix();
   translate(260, 20);
   fill(132, 179, 181);
@@ -72,7 +88,7 @@ void predio() {
 }
 
 //Função que desenha a janela
-void janela(Boolean aberta, int d, int l) {
+public void janela(Boolean aberta, int d, int l) {
   int h, w;
   w=120;
   h=60;
@@ -96,7 +112,7 @@ void janela(Boolean aberta, int d, int l) {
 }
 
 //Função que desenha a porta
-void porta() {
+public void porta() {
   int h, w;
   h=90;
   w=130;
@@ -110,4 +126,14 @@ void porta() {
   strokeWeight(10);
   point(20, h/2);
   point(-20, h/2);
+}
+  public void settings() {  size(600, 600); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Tarefa02" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }

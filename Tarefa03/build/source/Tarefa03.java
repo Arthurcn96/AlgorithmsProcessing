@@ -1,14 +1,32 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.awt.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Tarefa03 extends PApplet {
+
 //
 //  Implementar e aplicar um filtro negativo
 //  em uma imagem salvar o resultado em um png.
 //  Autor: Arthur Novais
 //
 
-import java.awt.*;
+
 PImage img;
 String name;
 
-void setup() {
+public void setup() {
 
   // Abre a janela de para selecionar imagens 
   selectInput("Selecione uma imagem:", "fileSelected");
@@ -18,11 +36,11 @@ void setup() {
   }while(img == null);
 
   img.resize(width,height);
-  size(1260,720);
+  
 
 }
 
-void draw() {
+public void draw() {
 
     image(img, 0, 0, width, height);
     filtro(img);
@@ -30,7 +48,7 @@ void draw() {
     noLoop();
 }
 
-void filtro(PImage img){
+public void filtro(PImage img){
 
 loadPixels();
 
@@ -56,14 +74,14 @@ updatePixels();
 }
 
 //Salva Imagem Quando Fecha Janela
-void dispose(){
+public void dispose(){
     javax.swing.JOptionPane.showMessageDialog ( null, "A Imagem Foi Salva Na Pasta Do Projeto", "Imagem Salva", javax.swing.JOptionPane.INFORMATION_MESSAGE  );
     save("inverted"+name);
 }
 
 
 // Selecionar arquivos de imagem
-void fileSelected(File selection) {
+public void fileSelected(File selection) {
 
   if (selection == null) {
 
@@ -88,4 +106,14 @@ void fileSelected(File selection) {
     }
   }
 
+}
+  public void settings() {  size(1260,720); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Tarefa03" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
