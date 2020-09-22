@@ -18,7 +18,6 @@ void setup(){
 
   background(#E5E5FF);
 
-
 }
 
 void draw( ) {
@@ -27,4 +26,11 @@ void draw( ) {
 
   image(img, 0, 0, img.width, img.height);
 
+}
+
+// Fecha o programa clicando 'q'
+void keyPressed(){
+  if (key == 'q'){
+    exit();
+  }
 }
