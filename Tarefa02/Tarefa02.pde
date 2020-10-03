@@ -26,7 +26,6 @@ void dispose(){
 void arvore() {
 
   pushMatrix();
-<<<<<<< HEAD
   strokeWeight(2);
   translate(75, 450);
   fill(132, 96, 53);
@@ -35,16 +34,6 @@ void arvore() {
   translate(23, 0);
   fill(42, 153, 16);
   ellipse(0, 0, 185, 110);
-=======
-    strokeWeight(2);
-    translate(75, 450);
-    fill(132, 96, 53);
-    rect(0, 0, 45, 150);
-
-    translate(23, 0); 
-    fill(42, 153, 16);
-    ellipse(0, 0, 185, 110);
->>>>>>> 762f8ef84b26db8a5151633fd8b7aff83d915f0e
   popMatrix();
 }
 
@@ -57,7 +46,6 @@ void predio() {
     fill(132, 179, 181);
     rect(0, 0, 320, 580);
 
-<<<<<<< HEAD
   int j, i = 0;
 
   //Desenha as janelas
@@ -80,33 +68,10 @@ void predio() {
   }while(j==i);
 
   porta();
-=======
-    int j, i = 0;
-  
-    //Desenha as janelas
-    while(i<5){
-      janela(true, 30+(90*i), 30);
-      janela(true, 30+(90*i), 170);
-      i++;
-    }
-  
-    //Desenha a janela fechada
-    i = (int)random(1,5);
-    janela(false, 30+(90*i), 170);
-  
-    i = (int)random(1,5);
-    janela(false, 30+(90*i), 30);
-   
-    do{
-      j = (int)random(1,5);
-      janela(false, 30+(90*j), 30);
-    }while(j==i);
-  
-    porta();
->>>>>>> 762f8ef84b26db8a5151633fd8b7aff83d915f0e
+
 
   popMatrix();
-  
+
 }
 
 //Função que desenha a janela
@@ -118,7 +83,7 @@ void janela(Boolean aberta, int d, int l) {
   pushMatrix();
 
     translate(l, d);
-    
+
     if (aberta) {
       fill(255, 255, 0);
       rect(0, 0, w, h);
@@ -131,7 +96,7 @@ void janela(Boolean aberta, int d, int l) {
       line(0, 0, 0, h);
     }
     popMatrix();
-    
+
 }
 
 //Função que desenha a porta
