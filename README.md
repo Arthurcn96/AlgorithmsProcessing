@@ -37,3 +37,7 @@ Para cada Ponto P(x,y) obter o ponto resultante P’(x,y). A Forma Matricial é 
 
 Com ângulos Θ = 33 ou 57 graus
 O resultado será gravado automaticamente no formato (.png).
+
+| Imagem Original | Resultado Obtido |
+|:------------:|:----------------:|
+|<img align="right"  width="100%" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/main/assets/tarefa02.png" /> |<img align="right"  width="100%" max-height="240" alt="GIF" src="https://raw.githubusercontent.com/Arthurcn96/AlgorithmsProcessing/main/Tarefa05/rotatedpredio.png" />|
