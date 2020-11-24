@@ -21,8 +21,10 @@ void draw(){
   background(50,50,200);
   camera();
 
-  // rua.show();
+  rua.show();
   arvore.show();
+
+  lights();
 
 
 

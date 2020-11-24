@@ -15,11 +15,13 @@ class Arvore{
 
   void show(){
 
-    translate(-3,0,-3);
-    shape(caule, 0, 0);
+    push();
+      translate(0,0,0);
+      shape(caule, 0, 0);
+    pop();
 
     push();
-      translate(-7,0,-7);
+      translate(-10,0,-10);
       shape(folhas, 0, 0);
     pop();
 
@@ -43,7 +45,9 @@ class Arvore{
 
     PShape s = createShape();
 
-    s.beginShape();
+
+    s.beginShape(QUADS);
+    s.fill(100,50,50);
       s.vertex(p1.x, p1.y, p1.z);
       s.vertex(p2.x, p2.y, p2.z);
       s.vertex(p3.x, p3.y, p3.z);
@@ -66,7 +70,6 @@ class Arvore{
 
       s.vertex(p8.x, p8.y, p8.z);
       s.vertex(p4.x, p4.y, p4.z);
-      s.fill(color(255,255,255));
     s.endShape(CLOSE);
 
     return s;
@@ -75,9 +78,9 @@ class Arvore{
 
   PShape folhas(){
 
-    x = 20;
+    x = 26;
     y = - 40;
-    z = 20;
+    z = 26;
 
     // Criando pontos
     PVector p1 = new PVector( 0, 0, 0);
@@ -88,7 +91,8 @@ class Arvore{
 
     PShape s = createShape();
 
-    s.beginShape();
+    s.beginShape(TRIANGLES);
+    s.fill(100,255,100);
       s.vertex(p5.x, p5.y, p5.z);
       s.vertex(p1.x, p1.y, p1.z);
       s.vertex(p2.x, p2.y, p2.z);
@@ -106,8 +110,6 @@ class Arvore{
       s.vertex(p1.x, p1.y, p1.z);
 
 
-
-      s.fill(color(255,255,255));
     s.endShape(CLOSE);
 
     return s;
