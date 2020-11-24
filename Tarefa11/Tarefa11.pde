@@ -4,11 +4,13 @@ int zoom = 0;
 int mX, mY;
 
 Rua rua;
+Arvore arvore;
 
 void setup(){
   size(500,500,P3D);
 
   rua = new Rua(300,10,100);
+  arvore = new Arvore();
 
   mX = (width / 2);
   mY = (height / 2);
@@ -19,7 +21,10 @@ void draw(){
   background(50,50,200);
   camera();
 
-  rua.show();
+  // rua.show();
+  arvore.show();
+
+
 
 }
 
@@ -52,4 +57,9 @@ void camera(){
   translate(mX, mY, zoom);
   rotateX(-ymag);
   rotateY(-xmag);
+}
+
+void mouseWheel(MouseEvent event) {
+  float e = event.getCount();
+  zoom += e*10;
 }
