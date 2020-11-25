@@ -2,29 +2,34 @@ PShape folhas;
 PShape caule;
 
 class Arvore{
-  int x;
-  int y;
-  int z;
+  int x, y, z;
+  int localx, localy;
 
   Arvore(){
 
-    caule = caule();
-    folhas = folhas();
+      caule = caule();
+      folhas = folhas();
 
   }
 
-  void show(){
-
+  void show(int x_, int y_){
     push();
-      translate(0,0,0);
-      shape(caule, 0, 0);
-    pop();
+      localx = x_;
+      localy = y_;
 
-    push();
-      translate(-10,0,-10);
-      shape(folhas, 0, 0);
-    pop();
+      translate(localx,-30,localy);
 
+      push();
+        translate(0,0,0);
+        shape(caule, 0, 0);
+      pop();
+
+      push();
+        translate(-10,0,-10);
+        shape(folhas, 0, 0);
+      pop();
+
+    pop();
 
   }
 
