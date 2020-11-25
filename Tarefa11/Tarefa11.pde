@@ -21,10 +21,12 @@ void draw(){
   background(50,50,200);
   camera();
 
+  directionalLight(255, 255, 255, 0, 10, 10);
+  ambientLight(255, 255, 255);
+
   rua.show();
   arvore.show();
 
-  lights();
 
 
 
