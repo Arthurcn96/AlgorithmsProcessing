@@ -12,10 +12,10 @@ class Arvore{
 
   }
 
-  void show(int x_, int y_){
+  void show(float x_, float y_){
     push();
-      localx = x_;
-      localy = y_;
+      localx = int(x_);
+      localy = int(y_);
 
       translate(localx,-30,localy);
 
@@ -52,7 +52,9 @@ class Arvore{
 
 
     s.beginShape(QUADS);
-    s.fill(100,50,50);
+    s.fill(48, 32, 4);
+
+      s.noStroke();
       s.vertex(p1.x, p1.y, p1.z);
       s.vertex(p2.x, p2.y, p2.z);
       s.vertex(p3.x, p3.y, p3.z);
@@ -97,7 +99,8 @@ class Arvore{
     PShape s = createShape();
 
     s.beginShape(TRIANGLES);
-    s.fill(100,255,100);
+    s.fill(20, 69, 0);
+      s.noStroke();
       s.vertex(p5.x, p5.y, p5.z);
       s.vertex(p1.x, p1.y, p1.z);
       s.vertex(p2.x, p2.y, p2.z);

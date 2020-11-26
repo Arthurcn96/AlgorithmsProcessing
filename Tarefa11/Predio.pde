@@ -98,12 +98,13 @@ class Predio{
       PShape s = createShape();
 
       s.beginShape(QUADS);
-      int rand = int( random(170,255));
-      s.fill(rand, rand, rand - 60 );
+        int rand = int( random(170,255));
+        s.fill(rand, rand, rand - 60 );
         s.vertex(p1.x, p1.y, p1.z);
         s.vertex(p2.x, p2.y, p2.z);
         s.vertex(p3.x, p3.y, p3.z);
         s.vertex(p4.x, p4.y, p4.z);
+
       s.endShape(CLOSE);
 
     pop();

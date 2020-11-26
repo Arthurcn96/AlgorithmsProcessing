@@ -1,9 +1,19 @@
+//
+//  realizada é criar a planta de uma casa (ou prédio)
+//  3D com janelas, um teto, portas e árvores.
+//  Autor: Arthur Novais
+//
+
+// Variaveis da Camera
 float newXmag, newYmag = 0;
-PVector pos;
 float xmag, ymag;
-int zoom = 0;
+int zoom = -50;
 int mX, mY ;
 
+// Posicao da arvores
+PVector[]  array = new PVector[40];
+
+// Estruturas da renderizacao
 Rua rua;
 Arvore arvore;
 Predio predio1;
@@ -12,42 +22,94 @@ Predio predio3;
 
 void setup(){
   size(500,500,P3D);
-
-  rua = new Rua(300,10,100);
-  arvore = new Arvore();
-
-  predio1 = new Predio();
-  predio2 = new Predio();
-  predio3 = new Predio();
+  inicio();
 
   mX = (width / 2);
   mY = (3*height / 4);
 
+  inicializar();
+
+}
+
+void inicializar(){
+  rua = new Rua(300,10,100);
+  arvore = new Arvore();
+  predio1 = new Predio();
+  predio2 = new Predio();
+  predio3 = new Predio();
+
+  // Gerando a posicao das arvores
+  int i,x ,y;
+  for(i = 0; i < 40; i++){
+    x = int( random(10,290) );
+    y = int( random(100,190) );
+    array[i] = new PVector(x,y);
+  }
+}
+
+void inicio(){
+  String texto = "Funcionalidades:\n 'Botão Direito' - Rotaciona a Camera \n 'Botão Esquerdo' - Altera a posicao da renderização \n 'Scroll do Mouse' - Zoom in e Zoom out \n 'Espaço' - Gera uma nova cidade";
 }
 
 
 void draw(){
-  background(50,50,200);
   camera();
-
   directionalLight(200, 200, 200, 50, 20, -60);
   ambientLight(255, 255, 255);
+  background(50,50,200);
 
-  rua.show();
+  //Gera (n*2)+1 "Bairros"
+  cidade(6);
 
-  floresta();
-
-  predio1.show();
-  translate(100,0,0);
-  predio2.show();
-  translate(100,0,0);
-  predio3.show();
+  frameRate(24);
 
 }
 
+//Carrega todas as Cidades em suas posicoes
+void cidade(int bairros){
+  push();
+    rua.show();
+    floresta();
+    predio1.show();
+    translate(100,0,0);
+    predio2.show();
+    translate(100,0,0);
+    predio3.show();
+  pop();
+
+  for(int i = 0; i < bairros; i++){
+    push();
+    translate(-300*i,0,0);
+      rua.show();
+      floresta();
+      predio1.show();
+      translate(100,0,0);
+      predio2.show();
+      translate(100,0,0);
+      predio3.show();
+    pop();
+
+    push();
+    translate(300*i,0,0);
+      rua.show();
+      floresta();
+      predio1.show();
+      translate(100,0,0);
+      predio2.show();
+      translate(100,0,0);
+      predio3.show();
+    pop();
+
+  }
+}
+
+//Carrega todas as arvores em suas posicoes
 void floresta(){
 
-      arvore.show(100,100);
+  int i;
+  for(i = 0; i < 40; i++){
+    arvore.show(array[i].x, array[i].y);
+  }
 
 }
 
@@ -69,21 +131,27 @@ void mouseDragged() {
       ymag -= diff/4.0;
     }
   }
-  if (mouseButton == RIGHT || mouseButton == CENTER) {
+  if (mouseButton == RIGHT) {
     mX = mouseX;
     mY = mouseY;
   }
+
 }
 
-/**
-Rotacao da Camera
-*/
+//Espaco para gerar outra cidade
+void keyPressed(){
+  if (keyCode == ' ' ) {
+  inicializar();
+  }
+}
+
+//Rotacao da Camera
 void camera(){
   translate(mX, mY, zoom);
-  rotateX(-ymag);
-  rotateY(-xmag);
+  rotateX(map(-ymag, 0, 400, -50, 50));
+  rotateY(map(-xmag, 0, 400, -100, -20));
 }
-
+//Zoom da Camera
 void mouseWheel(MouseEvent event) {
   float e = event.getCount();
   zoom += e*10;

@@ -45,6 +45,7 @@ class Rua{
 
     s.beginShape(QUADS);
       s.fill(180,180,180);
+      s.noStroke();
       s.vertex(p1.x, p1.y, p1.z);
       s.vertex(p2.x, p2.y, p2.z);
       s.vertex(p3.x, p3.y, p3.z);
@@ -95,6 +96,7 @@ class Rua{
 
     s.beginShape(QUADS);
       s.fill(80,80,80);
+      s.noStroke();
       s.vertex(p1.x, p1.y, p1.z);
       s.vertex(p2.x, p2.y, p2.z);
       s.vertex(p3.x, p3.y, p3.z);
