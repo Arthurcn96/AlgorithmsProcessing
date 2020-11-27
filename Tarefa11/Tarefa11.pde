@@ -49,7 +49,9 @@ void inicializar(){
 
 void inicio(){
   String texto = "Funcionalidades:\n 'Botão Direito' - Rotaciona a Camera \n 'Botão Esquerdo' - Altera a posicao da renderização \n 'Scroll do Mouse' - Zoom in e Zoom out \n 'Espaço' - Gera uma nova cidade";
+  javax.swing.JOptionPane.showMessageDialog ( null, texto, "Imagem Salva", javax.swing.JOptionPane.INFORMATION_MESSAGE  );
 }
+
 
 
 void draw(){
