@@ -29,6 +29,8 @@ void setup(){
 
   inicializar();
 
+  smooth(8);
+
 }
 
 void inicializar(){
