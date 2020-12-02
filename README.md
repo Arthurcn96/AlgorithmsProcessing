@@ -57,7 +57,7 @@ Com ângulos Θ = 33 ou 57 graus
 O resultado será gravado automaticamente no formato (.png).
 
 
-## [TAREFA PLANTA DE UMA CASA 3D](https://github.com/Arthurcn96/AlgorithmsProcessing/tree/main/Tarefa11):
+## [Tarefa Planta de uma casa 3D](https://github.com/Arthurcn96/AlgorithmsProcessing/tree/main/Tarefa11):
 1) A tarefa a ser realizada é criar a planta de uma casa (ou prédio) 3D com janelas, um teto, portas e
 árvores ao lado da casa (ou prédio) usando:
 
